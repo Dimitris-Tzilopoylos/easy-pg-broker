@@ -1,0 +1,32 @@
+{
+  "name": "easy-pg-broker",
+  "version": "1.0.0",
+  "description": "Easy postgres Listen/Notify",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "dist/",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  },
+  "keywords": [],
+  "author": "DimTzilop",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.11.5",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.17",
+    "@babel/preset-env": "^7.22.15",
+    "typescript": "^5.2.2"
+  }
+}
