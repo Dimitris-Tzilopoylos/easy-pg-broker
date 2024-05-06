@@ -76,6 +76,7 @@ const run = async () => {
   await Broker.subscribe("test1", (args) => {});
 
   setInterval(async () => {
+    // You can specify more than one handler per channel
     await Broker.notify("test1", Math.random()); // will be handled by all listeners on channel test 1
     await Broker.notify("test2", { message: "x" }, "app"); // will be handled only by listeners on channel test2 having clientId set to app
     await Broker.notify("test2", {}, ["app", "abc"]); // will be handled only by abc and app listeners of channel test2
